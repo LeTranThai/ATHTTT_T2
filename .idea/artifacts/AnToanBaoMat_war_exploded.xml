@@ -1,0 +1,51 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="AnToanBaoMat:war exploded">
+    <output-path>$PROJECT_DIR$/target/AnToanBaoMat-1.0-SNAPSHOT</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>AnToanBaoMat</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="AnToanBaoMat" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: javax.mail:mail:1.4" />
+          <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
+          <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
+          <element id="library" level="project" name="Maven: org.apache.tiles:tiles-jsp:3.0.8" />
+          <element id="library" level="project" name="Maven: org.apache.tiles:tiles-servlet:3.0.8" />
+          <element id="library" level="project" name="Maven: org.apache.tiles:tiles-core:3.0.8" />
+          <element id="library" level="project" name="Maven: commons-digester:commons-digester:2.0" />
+          <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.8.0" />
+          <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.6" />
+          <element id="library" level="project" name="Maven: org.apache.tiles:tiles-request-servlet:1.0.7" />
+          <element id="library" level="project" name="Maven: org.apache.tiles:tiles-template:3.0.8" />
+          <element id="library" level="project" name="Maven: org.apache.tiles:tiles-api:3.0.8" />
+          <element id="library" level="project" name="Maven: org.apache.tiles:tiles-autotag-core-runtime:1.2" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.6" />
+          <element id="library" level="project" name="Maven: org.apache.tiles:tiles-request-jsp:1.0.7" />
+          <element id="library" level="project" name="Maven: org.apache.tiles:tiles-request-api:1.0.7" />
+          <element id="library" level="project" name="Maven: com.mysql:mysql-connector-j:8.0.33" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.21.9" />
+          <element id="library" level="project" name="Maven: com.googlecode.json-simple:json-simple:1.1.1" />
+          <element id="library" level="project" name="Maven: junit:junit:4.10" />
+          <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-core:1.1" />
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.8.9" />
+          <element id="library" level="project" name="Maven: opensymphony:sitemesh:2.4.2" />
+          <element id="library" level="project" name="Maven: com.itextpdf:itextpdf:5.5.12" />
+          <element id="library" level="project" name="Maven: e-iceblue:spire.pdf:9.10.3" />
+          <element id="library" level="project" name="Maven: org.json:json:20230227" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/AnToanBaoMat-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="AnToanBaoMat/web/Web" />
+    </root>
+  </artifact>
+</component>
