@@ -1,0 +1,3 @@
+tạo thêm 1 database verifi
+những hóa đơn đã ký sẽ đc thêm vào verify
+chỗ hóa đơn của admin sẽ thêm 1 dòng đã xác nận hay chưa
