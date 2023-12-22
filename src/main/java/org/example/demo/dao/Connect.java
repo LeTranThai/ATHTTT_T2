@@ -12,7 +12,7 @@ public class Connect {
     private Connect() {
         String url = "jdbc:mysql://localhost:3306/clothers_shop";
         String userName = "root";
-        String password = "";
+        String password = "123456";
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(url,userName,password);
