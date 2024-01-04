@@ -8,6 +8,6 @@ import org.example.demo.model.Verification;
 
 public class VerificationService {
     public static long add(Verification verification) {
-        return VerificationDao.add(verification);
+        return VerificationDao.addVerification(verification);
     }
 }
