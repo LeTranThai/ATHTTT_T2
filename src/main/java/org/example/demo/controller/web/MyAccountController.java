@@ -2,8 +2,10 @@ package org.example.demo.controller.web;
 
 import org.example.demo.Services.AccountServices;
 import org.example.demo.Services.LoginService;
+import org.example.demo.Services.OrderServices;
 import org.example.demo.Services.SignService;
 import org.example.demo.model.Account;
+import org.example.demo.model.Order;
 import org.example.demo.model.Sign;
 import org.json.JSONObject;
 import org.example.demo.util.*;
@@ -22,7 +24,10 @@ import java.security.*;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
+import java.sql.Timestamp;
 import java.util.Base64;
+import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 @WebServlet(name = "myAccountController", value = "/my-account")
@@ -31,6 +36,11 @@ public class MyAccountController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         LoginService.login(request, response);
+        Account account = (Account) request.getSession().getAttribute("account");
+        List<Order> orders = OrderServices.getAllByAccount(account);
+        List<Sign> signsByIdA = SignService.getSigns(account);
+        request.setAttribute("orders", orders);
+        request.setAttribute("signsByIdA", signsByIdA);
         request.setAttribute("pageName", "Tài khoản");
         RequestDispatcher rd = request.getRequestDispatcher("/views/web/myAccount.jsp");
         rd.forward(request, response);
@@ -91,7 +101,8 @@ public class MyAccountController extends HttpServlet {
                         X509EncodedKeySpec ks = new X509EncodedKeySpec(keyBytes);
                         KeyFactory kf = KeyFactory.getInstance("RSA");
                         PublicKey currentPublicKey = kf.generatePublic(ks);
-
+                        Date currentDate = new Date();
+                        java.sql.Timestamp timestampFromDate = new Timestamp(currentDate.getTime());
                         rsa = new RSA();
                         String randomText = UUID.randomUUID().toString().substring(0, 6);
                         String encrypt = rsa.encrypt(randomText, Constants.PRIVATE_KEY, partPrivateKey.getPrivateKey(), 1024);
@@ -100,6 +111,8 @@ public class MyAccountController extends HttpServlet {
                             sign.setActive(false);
                             SignService.update(sign);
                             sign.setSign(partPublicKey.getStringKey());
+                            sign.setCreatedDate(timestampFromDate);
+                            sign.setModifiedDate(null);
                             sign.setKeySize(1024);
                             sign.setActive(true);
                             SignService.add(sign);
@@ -115,6 +128,8 @@ public class MyAccountController extends HttpServlet {
                 }
             } else if (type.equals("download")) {
                 if (sign == null) {
+                    Date currentDate = new Date();
+                    java.sql.Timestamp timestampFromDate = new Timestamp(currentDate.getTime());
                     Key key = new Key();
                     key.generatorKey(1024);
                     PublicKey publicKey = key.getPub();
@@ -122,6 +137,8 @@ public class MyAccountController extends HttpServlet {
                     sign = new Sign();
                     sign.setAccount(account);
                     sign.setSign(keyBase64);
+                    sign.setCreatedDate(timestampFromDate);
+                    sign.setModifiedDate(null);
                     sign.setKeySize(1024);
                     sign.setActive(true);
                     SignService.add(sign);

@@ -14,6 +14,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.sql.Timestamp;
+import java.util.Date;
 
 @WebServlet(name = "confirmController", value = "/confirm")
 public class ConfirmController extends HttpServlet {
@@ -26,11 +28,14 @@ public class ConfirmController extends HttpServlet {
         boolean confirm = RegisterService.confirmRegister(id, token);
         HttpSession session = request.getSession();
         String publicKey = (String) session.getAttribute("public");
-
+        Date currentDate = new Date();
+        Timestamp timestampFromDate = new Timestamp(currentDate.getTime());
         Sign sign = new Sign();
         sign.setAccount(AccountServices.getUser(id));
         sign.setSign(publicKey);
         sign.setKeySize(2024);
+        sign.setCreatedDate(timestampFromDate);
+        sign.setModifiedDate(null);
         sign.setActive(true);
         SignService.add(sign);
         session.removeAttribute("public");

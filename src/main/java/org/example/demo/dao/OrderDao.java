@@ -28,7 +28,25 @@ public class OrderDao {
         }
         return orders;
     }
-
+    public static List<Order> findAllByAccount(Account account) {
+        List<Order> orders = new ArrayList<>();
+        Connection connection = Connect.getInstance().getConnection();
+        try {
+            String query = "SELECT * FROM orders WHERE ACCOUNT_ID = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setLong(1, account.getId());
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                Order order = OrderMapper.mapRow(resultSet);
+                orders.add(order);
+            }
+            resultSet.close();
+            preparedStatement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return orders;
+    }
     public static Order findOneByAccount(Account account) {
         Connection connection = Connect.getInstance().getConnection();
         Order order = null;

@@ -9,18 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9422597c-d297-4dd1-88df-af2aff7aeac6" name="Changes" comment="1">
-      <change afterPath="$PROJECT_DIR$/.idea/ATHTTT_T2.iml" afterDir="false" />
+    <list default="true" id="9422597c-d297-4dd1-88df-af2aff7aeac6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/web/CancelKeyControll.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/Services/OrderServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/Services/OrderServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/Services/VerificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/Services/VerificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/Services/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/Services/RegisterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/Services/SignService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/Services/SignService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/web/CheckoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/web/CheckoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/web/ConfirmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/web/ConfirmController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/web/MyAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/web/MyAccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/dao/Connect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/dao/Connect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/dao/VerificationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/dao/VerificationDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/mapper/VerificationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/mapper/VerificationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/model/RSA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/model/RSA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/web/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/web/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/dao/OrderDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/dao/SignDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/dao/SignDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/components/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/components/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/web/myAccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/web/myAccount.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/web/shoppingCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/web/shoppingCart.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,9 +82,8 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Tomcat Server.Tomcat 9.0.80.executor&quot;: &quot;Run&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;hung&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/TTLTW/ATHTTT_T2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/AT/ATHTTT_T2&quot;,
+
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -101,47 +104,9 @@
       <recent name="D:\Downloads\AnToanBaoMat\AnToanBaoMat\src\main\java\org\example\demo\model" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.80">
-    <configuration name="Connect" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.demo.dao.Connect" />
-      <module name="AnToanBaoMat" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.demo.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderServices" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.demo.Services.OrderServices" />
-      <module name="AnToanBaoMat" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.demo.Services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RSA" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.demo.model.RSA" />
-      <module name="AnToanBaoMat" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.demo.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tomcat 9.0.80" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.80" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="Tomcat 8.5.87" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.84" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="AnToanBaoMat:war">
@@ -228,21 +193,6 @@
         </option>
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.OrderServices" />
-      <item itemvalue="Application.Connect" />
-      <item itemvalue="Application.RSA" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.80" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.RSA" />
-        <item itemvalue="Application.Connect" />
-        <item itemvalue="Application.RSA" />
-        <item itemvalue="Application.Connect" />
-        <item itemvalue="Application.RSA" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -256,17 +206,9 @@
       <workItem from="1702554495855" duration="2597000" />
       <workItem from="1702702305054" duration="17593000" />
       <workItem from="1702732768746" duration="705000" />
-      <workItem from="1702803568101" duration="776000" />
-      <workItem from="1702805583966" duration="216000" />
-      <workItem from="1703222090150" duration="742000" />
-    </task>
-    <task id="LOCAL-00001" summary="1">
-      <option name="closed" value="true" />
-      <created>1703222268897</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1703222268897</updated>
+      <workItem from="1704871935160" duration="1944000" />
+      <workItem from="1705120601940" duration="14041000" />
+
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />

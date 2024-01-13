@@ -61,7 +61,12 @@ public class RegisterController extends HttpServlet {
         newAccount.setEmail(email);
         newAccount.setUsername(userName);
         newAccount.setPassword(password);
-        int checkRegister = RegisterService.checkRegister(newAccount, publickey, privateKey);
+        String scheme = request.getScheme();
+        String serverName = request.getServerName();
+        int serverPort = request.getServerPort();
+        String baseURL = scheme + "://" + serverName + ":" + serverPort;
+
+        int checkRegister = RegisterService.checkRegister(newAccount, publickey, privateKey, baseURL);
         if (checkRegister == 0) {
             message = "Vui lòng click vào link trong email để xác thực đăng ký";
             request.setAttribute("message", message);
