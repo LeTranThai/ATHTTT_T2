@@ -1,8 +1,27 @@
+<%@ page import="java.util.List" %>
+<%@ page import="org.example.demo.model.Sign" %>
+<%@ page import="org.example.demo.model.Order" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page pageEncoding="UTF-8" %>
 <html>
 <head>
     <title>${requestScope.pageName}</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100% !important;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
 <!-- pages-title-start -->
@@ -117,7 +136,7 @@
                 <div class="faq-accordion">
                     <div class="panel-group pas7" id="accordion" role="tablist" aria-multiselectable="true">
                         <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="headingOne">
+                            <div class="panel-heading" role="tab" id="headingOne" style="margin-bottom: 6px">
                                 <h4 class="panel-title">
                                     <a class="collapsed method" role="button" data-toggle="collapse"
                                        data-parent="#accordion" href="#collapseOne" aria-expanded="false"
@@ -314,8 +333,119 @@
                                                         </button>
                                                     </a>
                                                 </div>
+
                                             </div>
                                         </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingFor">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                                       href="#collapseFor" aria-expanded="false" aria-controls="collapseTwo">Danh sách
+                                        chữ ký <i class="fa fa-caret-down"></i></a>
+                                </h4>
+                            </div>
+                            <div id="collapseFor" class="panel-collapse collapse" role="tabpanel"
+                                 aria-labelledby="headingThree" aria-expanded="false" style="height: 0px;">
+                                <div class="row">
+                                    <div class="easy2">
+                                        <div class="pull-right" style="width: 100%">
+                                            <table style="width: 100%">
+                                                <thead>
+                                                <tr>
+                                                    <th>STT</th>
+                                                    <th>Trạng thái</th>
+                                                    <th>Ngày tạo</th>
+                                                    <th>Ngày hết hạn</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <% List<Sign> signsByIdA = (List<Sign>) request.getAttribute("signsByIdA");
+                                                    for (int i = 0; i < signsByIdA.size(); i++) {
+                                                        Sign sign = signsByIdA.get(i);
+                                                %>
+                                                <tr style="height: 60px">
+                                                    <td><%=i + 1%>
+                                                    </td>
+                                                    <td><%=sign.isActive() == true ? "Using" : "Expired"%>
+                                                    </td>
+                                                    <td><%=sign.getCreatedDate()%>
+                                                    </td>
+                                                    <td><%=sign.getModifiedDate() == null ? "" : sign.getModifiedDate()%>
+                                                    </td>
+                                                    <td>
+                                                        <%if (sign.isActive()) {%>
+                                                        <a
+                                                                href="cancel-key?signId=<%=sign.getId()%>"
+                                                                class="btn btn-primary ce5">
+                                                            Hủy
+                                                        </a>
+                                                        <%}%>
+                                                    </td>
+                                                </tr>
+                                                <%}%>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="heading5">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                                       href="#collapse5" aria-expanded="false" aria-controls="collapseTwo">Danh sách
+                                        đơn hàng <i class="fa fa-caret-down"></i></a>
+                                </h4>
+                            </div>
+                            <div id="collapse5" class="panel-collapse collapse" role="tabpanel"
+                                 aria-labelledby="headingThree" aria-expanded="false" style="height: 0px;">
+                                <div class="row">
+                                    <div class="easy2">
+                                        <div class="pull-right" style="width: 100%">
+                                            <table style="width: 100%">
+                                                <thead>
+                                                <tr>
+                                                    <th>STT</th>
+                                                    <th>Ngày đặt</th>
+                                                    <th>Địa chỉ</th>
+                                                    <th>Trạng thái</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <% List<Order> orders = (List<Order>) request.getAttribute("orders");
+                                                    for (int i = 0; i < orders.size(); i++) {
+                                                        Order order = orders.get(i);
+                                                        String statusString = "";
+                                                        if (order.getStatus().getId() == 4) {
+                                                            statusString = "Chờ xác nhận";
+                                                        }
+                                                        if (order.getStatus().getId() == 5) {
+                                                            statusString = "Đang vận chuyển";
+                                                        }
+                                                        if (order.getStatus().getId() == 6) {
+                                                            statusString = "Đã hủy";
+                                                        }
+                                                %>
+                                                <tr style="height: 60px">
+                                                    <td><%=i + 1%>
+                                                    </td>
+                                                    <td><%=order.getCreatedDate()%>
+                                                    </td>
+                                                    <td><%=order.getOrderAddress()%>
+                                                    </td>
+                                                    <td><%=statusString%>
+                                                    </td>
+                                                </tr>
+                                                <%}%>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

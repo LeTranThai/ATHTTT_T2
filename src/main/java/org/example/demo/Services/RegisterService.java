@@ -13,7 +13,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.UUID;
 
 public class RegisterService {
-    public static int checkRegister(Account newAccount, String publicKey, String privateKey) {
+    public static int checkRegister(Account newAccount, String publicKey, String privateKey, String url) {
         try {
             if (checkKey(publicKey, privateKey)) {
                 if (!checkEmailExist(newAccount.getEmail())) {
@@ -23,7 +23,7 @@ public class RegisterService {
                         newAccount.setRole(RoleDao.findOneByName("USER"));
                         newAccount.setStatus(StatusDao.findOneByCode("UNVALIDATE"));
                         long id = AccountDao.add(newAccount);
-                        String link = "http://localhost:8080/confirm?id=" + id + "&token=" + validateToken;
+                        String link = url + "/confirm?id=" + id + "&token=" + validateToken;
                         SendMailService.sendMail(newAccount.getEmail(), "Xac thuc dang ky", link);
                         return 0;
                     } else {

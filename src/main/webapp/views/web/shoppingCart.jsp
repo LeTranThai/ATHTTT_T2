@@ -14,6 +14,9 @@
 <div class="shopping-cart-area s-cart-area">
     <div class="container">
         <div class="row">
+            <h3 style="color: red; margin-left: 16px"><%=request.getAttribute("message")%></h3>
+        </div>
+        <div class="row">
             <div class="col-md-12 col-xs-12">
                 <div class="s-cart-all">
                     <div class="cart-form table-responsive">

@@ -46,6 +46,9 @@ public class OrderServices {
     public static List<Order> getAll() {
         return OrderDao.findAll();
     }
+    public static List<Order> getAllByAccount(Account account) {
+        return OrderDao.findAllByAccount(account);
+    }
 
     public static boolean deleteOrder(long id) {
         return OrderDao.delete(id);
