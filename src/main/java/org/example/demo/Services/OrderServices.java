@@ -58,4 +58,11 @@ public class OrderServices {
         return OrderDao.update(order);
     }
 
+    public static void main(String[] args) {
+        // get all method
+        List<Order> listOrder = OrderServices.getAll();
+        for (Order order : listOrder) {
+            System.out.println(order);
+        }
+    }
 }

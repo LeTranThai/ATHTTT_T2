@@ -9,6 +9,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
 import java.security.KeyFactory;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
@@ -81,7 +82,7 @@ public class RSA {
     public String encryptToBase64(String text, String privateKey) throws Exception {
         Cipher cipher = Cipher.getInstance("RSA");
         cipher.init(Cipher.ENCRYPT_MODE, importPrivateKey(privateKey));
-        byte[] plaintext = text.getBytes("UTF-8");
+        byte[] plaintext = text.getBytes(StandardCharsets.UTF_8);
         byte[] cipherText = cipher.doFinal(plaintext);
         return Base64.getEncoder().encodeToString(cipherText);
     }
@@ -90,9 +91,15 @@ public class RSA {
         Cipher cipher = Cipher.getInstance("RSA");
         cipher.init(Cipher.DECRYPT_MODE, importPublicKey(publicKey));
         byte[] plaintext = cipher.doFinal(Base64.getDecoder().decode(text));
-        String output = new String(plaintext, "UTF-8");
-        return output;
+        return new String(plaintext, StandardCharsets.UTF_8);
     }
+    public String exportPublicKey() {
+        return Base64.getEncoder().encodeToString(publickey.getEncoded());
+    }
+    public String exportPrivateKey() {
+        return Base64.getEncoder().encodeToString(privatekey.getEncoded());
+    }
+
 
     public static void main(String[] args) throws Exception {
         RSA rsa = new RSA();

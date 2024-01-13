@@ -105,18 +105,22 @@
                         <form id="update-sign-form" enctype="multipart/form-data" action="my-account" method="post">
                             <input type="hidden" name="type" value="updateSign">
                             <div class="form-group">
-                                <label for="update-privateKey">Hãy chọn khóa riêng tư cũ của bạn</label>
-                                <input type="file" class="form-control"
-                                       name="privateKey"
-                                       id="update-privateKey" accept="application/JSON">
-                                <p class="form-text text-danger text-muted form-error"></p>
+                                <label class="l-contact" for="private">
+                                    Private key
+                                    <em>*</em>
+                                </label>
+                                <input type="text" name="private" id="private" value=""/>
+                                <span class="form-error text-red mt-16 form_message">${requestScope.message}</span>
+                                <input type="file" id="inputPrivateKey" onchange="readPrivateKeyFile()">
                             </div>
                             <div class="form-group">
-                                <label for="update-privateKey">Hãy chọn khóa công khai mới của bạn</label>
-                                <input type="file" class="form-control"
-                                       name="publicKey"
-                                       id="update-publicKey" accept="application/JSON">
-                                <p class="form-text text-danger text-muted form-error"></p>
+                                <label class="l-contact" for="public">
+                                    Khoá công khai mới
+                                    <em>*</em>
+                                </label>
+                                <input type="text" name="public" id="public" value=""/>
+                                <span class="form-error text-red mt-16 form_message"></span>
+                                <input type="file" id="inputPublicKey" onchange="readPublicKeyFile()">
                             </div>
                         </form>
                     </div>
@@ -465,8 +469,8 @@
         errorSelector: ".form-error",
         formGroupSelector: ".form-group",
         rules: [
-            Validator.isRequire("#update-privateKey", "Chưa chọn khóa riêng tư"),
-            Validator.isRequire("#update-publicKey", "Chưa chọn khóa công khai"),
+            Validator.isRequire("#private", "Chưa chọn khóa riêng tư"),
+            Validator.isRequire("#public", "Chưa chọn khóa công khai"),
         ]
     });
 
@@ -507,6 +511,106 @@
         $("#form-change-pass").submit();
         $("#modal-change-pass").modal("hide");
     }
+
+</script>
+<script>
+    function downloadKeys() {
+        // Tạo XMLHttpRequest
+        var xhr = new XMLHttpRequest();
+
+        // Đặt sự kiện khi yêu cầu được hoàn thành
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    // Xử lý phản hồi từ máy chủ
+                    var response = JSON.parse(xhr.responseText);
+
+                    // Hiển thị khóa trên trang
+                    document.getElementById('public').value = response.publicKey;
+                    document.getElementById('private').value = response.privateKey;
+
+                    // Tạo một tệp JSON để tải về
+                    var blob = new Blob([xhr.responseText], {type: 'application/json'});
+                    var link = document.createElement('a');
+
+                    // Thiết lập thông tin tệp
+                    link.href = window.URL.createObjectURL(blob);
+                    link.download = 'keyPair.json';
+
+                    // Thêm liên kết vào trang và kích hoạt sự kiện click
+                    document.body.appendChild(link);
+                    link.click();
+
+                    // Loại bỏ liên kết sau khi tải về
+                    document.body.removeChild(link);
+                } else {
+                    // Xử lý lỗi nếu có
+                    console.error('Failed to fetch keys.');
+                }
+            }
+        };
+
+        // Mở yêu cầu GET đến URL của máy chủ
+        xhr.open('GET', '/keys?command=setKey', true);
+
+        // Gửi yêu cầu
+        xhr.send();
+    }
+</script>
+<script>
+    <!-- Thêm đoạn mã JavaScript sau vào trang HTML của bạn -->
+    function readPublicKeyFile() {
+        var inputPublicKey = document.getElementById('inputPublicKey');
+        var publicInput = document.getElementById('public');
+
+        // Kiểm tra xem người dùng đã chọn tệp hay chưa
+        if (inputPublicKey.files.length > 0) {
+            var file = inputPublicKey.files[0];
+            var reader = new FileReader();
+
+            // Đặt sự kiện khi đọc tệp hoàn tất
+            reader.onload = function (e) {
+                try {
+                    var keyPair = JSON.parse(e.target.result);
+
+                    // Hiển thị khóa trên trang
+                    publicInput.value = keyPair.publicKey;
+                } catch (error) {
+                    console.error('Error parsing JSON:', error);
+                }
+            };
+
+            // Đọc nội dung của tệp
+            reader.readAsText(file);
+        }
+    }
+
+    function readPrivateKeyFile() {
+        var inputPrivateKey = document.getElementById('inputPrivateKey');
+        var privateInput = document.getElementById('private');
+
+        // Kiểm tra xem người dùng đã chọn tệp hay chưa
+        if (inputPrivateKey.files.length > 0) {
+            var file = inputPrivateKey.files[0];
+            var reader = new FileReader();
+
+            // Đặt sự kiện khi đọc tệp hoàn tất
+            reader.onload = function (e) {
+                try {
+                    var keyPair = JSON.parse(e.target.result);
+
+                    // Hiển thị khóa trên trang
+                    privateInput.value = keyPair.privateKey;
+                } catch (error) {
+                    console.error('Error parsing JSON:', error);
+                }
+            };
+
+            // Đọc nội dung của tệp
+            reader.readAsText(file);
+        }
+    }
+
 
 </script>
 </body>

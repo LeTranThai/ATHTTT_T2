@@ -86,13 +86,16 @@ public class MyAccountController extends HttpServlet {
                 }
             } else if (type.equals("updateSign")) {
                 if (sign != null) {
-                    Part privateKeyPart = request.getPart("privateKey");
-                    Part publicKeyPart = request.getPart("publicKey");
+                    Part privateKeyPart = request.getPart("private");
+                    Part publicKeyPart = request.getPart("public");
 
                     RSA rsa = null;
                     try {
-                        PartKey partPrivateKey = new PartKey(privateKeyPart, "privateKey");
-                        PartKey partPublicKey = new PartKey(publicKeyPart, "publicKey");
+                        PartKey partPrivateKey = new PartKey(privateKeyPart, "private");
+
+                        PartKey partPublicKey = new PartKey(publicKeyPart, "public");
+                         System.out.println(partPublicKey.getStringKey());
+                         System.out.println(partPrivateKey.getStringKey());
 
                         byte[] keyBytes = Base64.getDecoder().decode(sign.getSign());
                         X509EncodedKeySpec ks = new X509EncodedKeySpec(keyBytes);

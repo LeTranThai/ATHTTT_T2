@@ -1,13 +1,13 @@
 package org.example.demo.mapper;
 
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import org.example.demo.dao.AccountDao;
 import org.example.demo.dao.OrderDao;
 import org.example.demo.dao.SignDao;
 import org.example.demo.model.Sign;
 import org.example.demo.model.Verification;
-
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 public class VerificationMapper {
     public static Verification mapRow(ResultSet rs) throws SQLException {
