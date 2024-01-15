@@ -71,7 +71,10 @@ public class SignController extends HttpServlet {
                 folder.mkdir();
             }
             orderPdf.write(readPath + "/" + fileName);
-            FileUtil.copyFile(readPath + "/" + fileName, "E:\\GocHocTap\\intellij\\Antoanbaomathttt\\WebBanQuanAo\\src\\main\\webapp\\orders\\upload\\order-" + orderId + ".pdf", false);
+            String projectDirectory = System.getProperty("user.dir");
+            String targetDirectory = projectDirectory + "\\src\\main\\webapp\\orders\\upload\\order-";
+
+            FileUtil.copyFile(readPath + "/" + fileName, targetDirectory+ orderId + ".pdf", false);
 
             String orderNoSignUrl = request.getServletContext().getRealPath("/orders/download/order-" + orderId + ".pdf");
             String orderSignUrl = readPath + "/" + fileName;
@@ -104,4 +107,6 @@ public class SignController extends HttpServlet {
         RequestDispatcher rd = request.getRequestDispatcher("/views/web/notification.jsp");
         rd.forward(request, response);
     }
+
+
 }

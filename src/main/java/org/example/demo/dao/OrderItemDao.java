@@ -28,6 +28,23 @@ public class OrderItemDao {
         return orders;
     }
 
+    //get price of order in order detail by id
+    public static double getPriceById(long id) throws SQLException {
+        String sql = "Select PRICE from order_detail where ORDER_ID = ?";
+        Connection connection = Connect.getInstance().getConnection();
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setLong(1, id);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        double price = 0;
+        while (resultSet.next()) {
+            price += resultSet.getDouble("PRICE");
+        }
+        return price;
+
+
+    }
+
+
     public static boolean add(OrderItem item) {
         String sql = "INSERT INTO order_detail(ORDER_ID, PRODUCT_ID, COLOR_ID, SIZE_ID, AMOUNT, PRICE, DISCOUNT) VALUES(?, ?, ?, ?, ?, ?, ?);";
         Connection connection = Connect.getInstance().getConnection();
@@ -62,5 +79,10 @@ public class OrderItemDao {
             e.printStackTrace();
             return false;
         }
+    }
+
+    public static void main(String[] args) throws SQLException {
+        double price  = OrderItemDao.getPriceById(1);
+        System.out.println(price);
     }
 }
