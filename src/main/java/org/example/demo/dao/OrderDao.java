@@ -148,5 +148,13 @@ public class OrderDao {
         return id;
     }
 
+    public static void main(String[] args) {
+        //test add order
+
+
+
+
+    }
+
 }
 

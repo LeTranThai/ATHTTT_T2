@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="AnToanBaoMat:war exploded">
+  <artifact type="exploded-war" external-system-id="Maven" name="AnToanBaoMat:war exploded">
     <output-path>$PROJECT_DIR$/target/AnToanBaoMat-1.0-SNAPSHOT</output-path>
     <properties id="maven-jee-properties">
       <options>
