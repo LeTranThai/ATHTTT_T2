@@ -39,12 +39,15 @@ public class MainPanel extends JPanel {
 		btnGenerateSignature.addActionListener(new ActionListener() {
 
 			@Override
-			public void actionPerformed(ActionEvent e) {
-				try {
-					moveScreen(new CreateDigitalSignatureScreen());
-				} catch (NoSuchProviderException e1) {
-					JOptionPane.showMessageDialog(getParent(), e1.getMessage());
-				}
+			public void actionPerformed(ActionEvent e){
+				
+					
+						try {
+							moveScreen(new CreateDigitalSignatureScreen());
+						} catch (NoSuchProviderException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
 			}
 		});
 

@@ -97,12 +97,12 @@ public class SignPDFScreen extends JPanel {
 		lblNewLabel_1.setBounds(239, 241, 231, 26);
 		add(lblNewLabel_1);
 
-		JButton btnNewButton_2 = new JButton("Ký lên hóa đơn");
+		JButton btnNewButton_2 = new JButton("Ký lên văn bản");
 		btnNewButton_2.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 		btnNewButton_2.setBounds(223, 366, 200, 26);
 		add(btnNewButton_2);
 
-		JButton btnNewButton_2_1 = new JButton("Lưu hóa đơn đã ký");
+		JButton btnNewButton_2_1 = new JButton("Lưu văn bản đã ký");
 		btnNewButton_2_1.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 		btnNewButton_2_1.setBounds(552, 366, 200, 26);
 		add(btnNewButton_2_1);
