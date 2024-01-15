@@ -9,8 +9,5 @@
         <module name="AnToanBaoMat" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="AnToanBaoMat" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
