@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="AnToanBaoMat:war">
+  <artifact type="war" external-system-id="Maven" name="AnToanBaoMat:war">
     <output-path>$PROJECT_DIR$/target</output-path>
     <properties id="maven-jee-properties">
       <options>

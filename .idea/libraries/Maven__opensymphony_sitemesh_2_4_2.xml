@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Maven: opensymphony:sitemesh:2.4.2">
+  <library name="Maven: opensymphony:sitemesh:2.4.2" type="java-imported" external-system-id="Maven">
+    <properties groupId="opensymphony" artifactId="sitemesh" version="2.4.2" />
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/opensymphony/sitemesh/2.4.2/sitemesh-2.4.2.jar!/" />
     </CLASSES>
