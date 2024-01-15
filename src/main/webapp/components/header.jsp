@@ -26,9 +26,9 @@
                                 <li><a href="admin-dash-board"><i
                                         class="fa fa-user"></i>Quản lý</a></li>
                             </c:if>
-                            <li><a href="my-account"><i
-                                    class="fa fa-user"></i>${accountIsExist?account.username:"Tài Khoản"}</a></li>
                             <c:if test="${accountIsExist}">
+                                <li><a href="my-account"><i
+                                        class="fa fa-user"></i>${accountIsExist?account.username:"Tài Khoản"}</a></li>
                                 <li><a href="shopping-cart"><i class="fa fa-shopping-cart"></i>Giỏ hàng</a></li>
                             </c:if>
                             <c:if test="${accountIsExist}">
@@ -242,6 +242,7 @@
     const myDateElement = document.getElementById("my-date");
     myDateElement.innerText = formatDate;
     const cartIcon = $("#all-card-item");
+
     function increaseItem() {
         let numItem = parseInt(cartIcon.text());
         numItem++;

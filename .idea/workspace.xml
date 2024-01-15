@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9422597c-d297-4dd1-88df-af2aff7aeac6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/web/CancelKeyControll.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/AnToanBaoMat_war.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/AnToanBaoMat_war_exploded.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
@@ -48,13 +48,20 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_6.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_6.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnToanBaoMat.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/Services/VerificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/Services/VerificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnToanBaoMat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AnToanBaoMat.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/Services/OrderServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/Services/OrderServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/Services/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/Services/RegisterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/Services/SignService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/Services/SignService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/web/CheckoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/web/CheckoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/web/ConfirmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/web/ConfirmController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/web/MyAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/web/MyAccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/web/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/web/RegisterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/dao/OrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/web/notification.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/web/notification.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/dao/SignDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/dao/SignDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/components/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/components/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/web/myAccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/web/myAccount.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/web/shoppingCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/web/shoppingCart.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,8 +102,8 @@
     </option>
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
+    &quot;associatedIndex&quot;: 7
+    }</component>
   <component name="ProjectId" id="2ZWdQ4nc2rmMrvsezFcY7aOUyTf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -105,33 +112,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.OrderDao.executor": "Run",
-    "Application.OrderServices.executor": "Run",
-    "Maven.AnToanBaoMat [clean].executor": "Run",
-    "Maven.AnToanBaoMat [install].executor": "Run",
-    "Maven.AnToanBaoMat [package].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Tomcat Server.Tomcat 9.0.80.executor": "Run",
-    "Tomcat Server.Tomcat 9.0.84.executor": "Run",
-    "WebServerToolWindowFactoryState": "false",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/AT/ATHTTT_T2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.20114942",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.OrderDao.executor&quot;: &quot;Run&quot;,
+    &quot;Application.OrderServices.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.AnToanBaoMat [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.AnToanBaoMat [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.AnToanBaoMat [package].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Tomcat Server.Tomcat 9.0.80.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.Tomcat 9.0.84.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/AT/ATHTTT_T2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.20114942&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\atbm\ATHTTT_T2\src\main\java\org\example\demo\Services" />
@@ -283,6 +290,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update signup and order" />
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>
