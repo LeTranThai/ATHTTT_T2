@@ -26,7 +26,7 @@ public class Home extends JFrame {
 	 * Create the frame.
 	 */
 	public Home() {
-		setTitle("Nhom22_ATBMHTTT_2020_Tool");
+		setTitle("ATBMHTTT_Tool");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 978, 599);
 		MainPanel mainPanel = new MainPanel();
