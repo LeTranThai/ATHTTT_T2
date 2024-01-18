@@ -267,7 +267,7 @@ public class CreateDigitalSignatureScreen extends JPanel {
 		JButton btnKhiToFile = new JButton("Khởi tạo file chữ kí");
 		btnKhiToFile.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (!textField_UserName.getText().equals("") & !textField_Email.getText().equals("") & !textField_Phone.getText().equals("")
+				if (!textField_UserName.getText().equals("") 
 						& !textAreaKhoaCongKhai.getText().equals("") & !textAreaKhoaBiMat.getText().equals("")) {
 					//Long a line here
 					int keySize = Integer.parseInt((String) comboBox.getItemAt(comboBox.getSelectedIndex()));

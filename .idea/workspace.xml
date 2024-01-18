@@ -9,22 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-
-    <list default="true" id="9422597c-d297-4dd1-88df-af2aff7aeac6" name="Changes" comment="1">
-      <change afterPath="$PROJECT_DIR$/.idea/ATHTTT_T2.iml" afterDir="false" />
-
-    <list default="true" id="9422597c-d297-4dd1-88df-af2aff7aeac6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/web/CancelKeyControll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="33eae959-5b2a-4b8f-9fb9-e24cdc89d242" name="Changes" comment="cap nhat file tool.jar">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/AnToanBaoMat_war_exploded.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-
-      <change beforePath="$PROJECT_DIR$/AnToanBaoMat.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/Services/VerificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/Services/VerificationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/web/CheckoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/web/CheckoutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/dao/OrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/web/notification.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/web/notification.jsp" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/AnToanBaoMat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AnToanBaoMat.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/dao/Connect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/dao/Connect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/components/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/components/header.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +24,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -45,7 +35,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -54,67 +43,35 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="2ZWdQ4nc2rmMrvsezFcY7aOUyTf" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.OrderDao.executor": "Run",
-    "Application.OrderServices.executor": "Run",
-    "Maven.AnToanBaoMat [clean].executor": "Run",
-    "Maven.AnToanBaoMat [install].executor": "Run",
-    "Maven.AnToanBaoMat [package].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Tomcat Server.Tomcat 9.0.80.executor": "Run",
-    "Tomcat Server.Tomcat 9.0.84.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/AT/ATHTTT_T2",
+    "git-widget-placeholder": "hung1",
+    "last_opened_file_path": "D:/ATHTTT_T2/src/main/webapp/views/web",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.20114942",
-    "settings.editor.selected.configurable": "MavenSettings",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\atbm\ATHTTT_T2\src\main\java\org\example\demo\Services" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Downloads\AnToanBaoMat\AnToanBaoMat\src\main\java\org\example\demo\model" />
+      <recent name="D:\ATHTTT_T2\src\main\webapp\views\web" />
     </key>
   </component>
-
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.84">
-    <configuration name="OrderDao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.demo.dao.OrderDao" />
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.801">
+    <configuration name="Connect" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.demo.dao.Connect" />
       <module name="AnToanBaoMat" />
       <extension name="coverage">
         <pattern>
@@ -126,11 +83,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-
-    <configuration name="Tomcat 9.0.84" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.84" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-
-  <component name="RunManager">
-    <configuration name="Tomcat 8.5.87" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.84" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.801" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.801" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="AnToanBaoMat:war">
@@ -140,7 +93,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="a4cc1db6-ea86-49fc-a3cc-c4639dedeb59" />
+        <option name="BASE_DIRECTORY_NAME" value="6de07c21-cca7-45e3-a9d6-dec83ba4d831" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -148,7 +101,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="51486" />
+        <option name="DEBUG_PORT" value="65222" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -217,54 +170,50 @@
         </option>
       </method>
     </configuration>
-
-      <item itemvalue="Application.OrderDao" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.84" />
+    <list>
+      <item itemvalue="Application.Connect" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.801" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.OrderDao" />
+        <item itemvalue="Application.Connect" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-3183f394aec4-7d648f2c" />
-      </set>
-    </attachedChunks>
-
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9422597c-d297-4dd1-88df-af2aff7aeac6" name="Changes" comment="" />
-      <created>1702541749671</created>
+      <changelist id="33eae959-5b2a-4b8f-9fb9-e24cdc89d242" name="Changes" comment="" />
+      <created>1705321791729</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1702541749671</updated>
-      <workItem from="1702541751088" duration="5063000" />
-      <workItem from="1702554495855" duration="2597000" />
-      <workItem from="1702702305054" duration="17593000" />
-      <workItem from="1702732768746" duration="705000" />
-
-      <workItem from="1704871935160" duration="1944000" />
-      <workItem from="1705120601940" duration="14041000" />
-      <workItem from="1705296823591" duration="6513000" />
-
-      <workItem from="1704871935160" duration="1944000" />
-      <workItem from="1705120601940" duration="14041000" />
-
+      <updated>1705321791729</updated>
+      <workItem from="1705321794064" duration="2020000" />
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00001" summary="cap nhat file tool.jar">
+      <option name="closed" value="true" />
+      <created>1705321870543</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705321870543</updated>
+    </task>
+    <task id="LOCAL-00002" summary="cap nhat file tool.jar">
+      <option name="closed" value="true" />
+      <created>1705321902336</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705321902336</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update signup and order" />
-    <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="cap nhat file tool.jar" />
+    <option name="LAST_COMMIT_MESSAGE" value="cap nhat file tool.jar" />
   </component>
 </project>
