@@ -20,7 +20,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import heppers.Constants;
-import view.MainPanel;
+
+
+
 
 public class Support {
 	private JFrame frame = new JFrame();
@@ -67,8 +69,11 @@ public class Support {
 		JSONObject json = new JSONObject();
 		try {
 			json.put("userName", hash.hash(userName.getText().trim()));
+
 		
-		
+
+	
+
 			if (typeKey.equalsIgnoreCase(Constants.PUBLIC_KEY)) {
 				json.put("publicKey", key.getText().trim());
 			} else if (typeKey.equalsIgnoreCase(Constants.PRIVATE_KEY)) {
@@ -91,24 +96,31 @@ public class Support {
 
 	public void read(File file, JTextArea textArea) {
 		String result = "";
+
 		if (file.getName().endsWith(".json")) {
+
 			try {
 				List<String> allText = Files.readAllLines(file.toPath(), StandardCharsets.UTF_8);
 				for (String line : allText) {
 					result += line;
 				}
+
 				 int startIndex = result.indexOf("\"publicKey\":\"") + "\"publicKey\":\"".length();
 		            int endIndex = result.indexOf("\",\"userName\"");
 				
 		            result = result.substring(startIndex, endIndex);
-		            textArea.setText(result);
+
+				textArea.setText(result);
+
 			} catch (Exception e) {
 				JOptionPane.showMessageDialog(frame, e.getMessage(), "Lỗi", JOptionPane.ERROR_MESSAGE);
 			}
 		} else {
+
 			JOptionPane.showMessageDialog(frame, "Hiện tại hệ thống chỉ hỗ trợ đọc file json", "Chú ý",
 					JOptionPane.INFORMATION_MESSAGE);
 		}
 	}
-	
+
+		
 }
