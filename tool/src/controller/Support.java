@@ -1,4 +1,4 @@
-package controller;
+	package controller;
 
 import java.awt.event.ActionEvent;
 import java.io.File;
@@ -20,9 +20,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import heppers.Constants;
-
-
-
+import view.MainPanel;
 
 public class Support {
 	private JFrame frame = new JFrame();
@@ -69,17 +67,14 @@ public class Support {
 		JSONObject json = new JSONObject();
 		try {
 			json.put("userName", hash.hash(userName.getText().trim()));
-
-		
-
-	
-
-			if (typeKey.equalsIgnoreCase(Constants.PUBLIC_KEY)) {
-				json.put("publicKey", key.getText().trim());
-			} else if (typeKey.equalsIgnoreCase(Constants.PRIVATE_KEY)) {
-				json.put("privateKey", key.getText().trim());
-			}
 			json.put("keySize", keySize);
+		
+			if (typeKey.equalsIgnoreCase(Constants.PRIVATE_KEY)) {
+				json.put("privateKey", key.getText().trim());
+			} else if (typeKey.equalsIgnoreCase(Constants.PUBLIC_KEY)) {
+				json.put("publicKey", key.getText().trim());
+			}
+			
 //			json.put("phone", List.of("Mountain View", "Los Angeles", "New York"));
 		} catch (JSONException e) {
 			JOptionPane.showMessageDialog(frame, "Lỗi: " + e.getMessage(), "Có lỗi rồi bạn ơi!",
@@ -96,31 +91,33 @@ public class Support {
 
 	public void read(File file, JTextArea textArea) {
 		String result = "";
-
 		if (file.getName().endsWith(".json")) {
-
 			try {
 				List<String> allText = Files.readAllLines(file.toPath(), StandardCharsets.UTF_8);
 				for (String line : allText) {
 					result += line;
 				}
-
-				 int startIndex = result.indexOf("\"publicKey\":\"") + "\"publicKey\":\"".length();
-		            int endIndex = result.indexOf("\",\"userName\"");
-				
-		            result = result.substring(startIndex, endIndex);
-
-				textArea.setText(result);
-
+				 int startIndex1 = result.indexOf("\"publicKey\":\"") + "\"publicKey\":\"".length();
+				 int startIndex2 = result.indexOf("\"privateKey\":\"") + "\"privateKey\":\"".length();
+		            int endIndex1 = result.indexOf("\",\"userName\"");
+		            int endIndex2 = result.indexOf("\",\"keySize\"");
+		            if(result.contains("\",\"userName\"")&& result.contains("\",\"userName\"")) {
+		            	 result = result.substring(startIndex1, endIndex1);
+		            }else if(result.contains("\",\"keySize\"")&& result.contains("\"privateKey\":\"")) {
+		            	result = result.substring(startIndex2, endIndex2);
+		            	
+		            }
+		            
+		           
+		            textArea.setText(result);
 			} catch (Exception e) {
-				JOptionPane.showMessageDialog(frame, e.getMessage(), "Lỗi", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(frame, e.getMessage(), "Lỗi",  JOptionPane.ERROR_MESSAGE);
 			}
 		} else {
-
 			JOptionPane.showMessageDialog(frame, "Hiện tại hệ thống chỉ hỗ trợ đọc file json", "Chú ý",
 					JOptionPane.INFORMATION_MESSAGE);
 		}
 	}
-
-		
+	
+	
 }
