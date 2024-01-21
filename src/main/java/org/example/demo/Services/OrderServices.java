@@ -1,10 +1,9 @@
 package org.example.demo.Services;
 
+import org.example.demo.dao.OrderDao;
 import org.example.demo.dao.OrderItemDao;
 import org.example.demo.model.*;
-import org.example.demo.dao.OrderDao;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class OrderServices {
@@ -13,7 +12,7 @@ public class OrderServices {
         return OrderDao.add(order);
     }
 
-    public static Order getOrderByAccountAndStatus(Account account, Status status) {
+    public static Order getOrderByAccountAndStatus(Account account, int status) {
         return OrderDao.findOneByAccountAndStatus(account, status);
     }
 
@@ -46,6 +45,7 @@ public class OrderServices {
     public static List<Order> getAll() {
         return OrderDao.findAll();
     }
+
     public static List<Order> getAllByAccount(Account account) {
         return OrderDao.findAllByAccount(account);
     }
@@ -56,6 +56,14 @@ public class OrderServices {
 
     public static boolean updateStatus(Order order) {
         return OrderDao.update(order);
+    }
+
+    public static boolean updateStatusCan(int idStatus, long id) {
+        return OrderDao.updateStatus(idStatus, id);
+    }
+
+    public static boolean updateOrder(int billId, long id) {
+        return OrderDao.updateOrder(billId, id);
     }
 
     public static void main(String[] args) {

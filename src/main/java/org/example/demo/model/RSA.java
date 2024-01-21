@@ -1,33 +1,11 @@
 package org.example.demo.model;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import javax.crypto.Cipher;
 import java.nio.charset.StandardCharsets;
-import java.security.KeyFactory;
-import java.security.KeyPair;
-import java.security.KeyPairGenerator;
-import java.security.NoSuchAlgorithmException;
-import java.security.PrivateKey;
-import java.security.PublicKey;
-import java.security.SecureRandom;
+import java.security.*;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.Base64;
-
-import javax.crypto.BadPaddingException;
-import javax.crypto.Cipher;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.KeyGenerator;
-import javax.crypto.SecretKey;
-import javax.crypto.spec.IvParameterSpec;
-import javax.crypto.spec.SecretKeySpec;
 
 public class RSA {
 
@@ -103,8 +81,8 @@ public class RSA {
 
     public static void main(String[] args) throws Exception {
         RSA rsa = new RSA();
-        String key = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsLpiev9NiqPO9fE2jonluzHfBMDi9UTAo76wq3PqGSi72N2Lj1MCxV9O/ZCiT+M5C7rThNGz/MJUuS/h95JOg9XEYgLLESzQyDzQK2kz62wlAjuX4NzncZb+bPBKZ4NXAna8MFuSlREgkv/CTjAE5DrPqyqIZA9K1BbRTWb5w/tJIdsep/tRsFJCQdHwQkrM3o3zleplKA8+it7bLcTqnFeFRvOL/9Jv6m6i6dzygXNk1CA+4z7NfMMJoENqUu9aL89eeFU6XSgpWba9B6bbIP+Qf9JJckbIwCw86JQMoB8Zz6/eABDHnwPGg6i6GQ1ExCYlmXpMng/tabFKdU0jsQIDAQAB";
-        String text ="AJ6yoQM3EFOuV7dewLUpDjh9kon1iKo58LntME64taIUUq231JotEFgmwNTxeTo8EZAp8cvLYbQy91d34D4LnUMoccq0fJSRhvdFVClSklMOUJ+3SiOk+1qg1HtRWFzFSjmADEKIsHr4+iMKNCFWdiWdCkKXYeWHJ4MS4LElWm2r39b5RbRf6P8nzLx04fBZMBPXmGg/7juu8YOWH6u+/Cp0/XNX7MKI/q7IH/OQp4p5lss0WpI3ASeAAMwyNQ7gUI9zs2BTLm/d4M5lsSDKSDLa9UHcc6vjhz+l/NyshBsl1zs/KyqpuRuNgv3GmXGf1paVC3C1oVEH6OqsEYu1zA==";
+        String key = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuOB+Lk0P0fkyWQAKLcqi/ZsmUaV7dFWTHzQ6R605wYFp7IzdEejMMlTcMWVVNofjPiid09ln6lhcNPdvbVnHumXRWXE52VQQKYcYjfl5i5kqFssjDeIyAgvg7nK25h3sPGEJquhcD0GijlGTDGFHa9GYrpQWHG1VbBcXUmkCAa5JekX8xlCbr7Pn2hCbR9pvwI+zJKMMxl0XLis5Q0PxSaI69979pv8J8W1SgtNExtB+MHpPE/Q0xa6kf5WQDXtHpA1rS8/OnanE7f/BFlEBn0mWFNIqL6s/iSzoRyCRr2FVGprFl9vwuomJG92XDL7X6jSUP7o24fME9wbLY2n/uwIDAQAB";
+        String text ="csareNRqV3+UH2o6qF1lhvlamHEXX1S186QtFSn4aeAyHzdqSR2hKzxLe/rTFSg2rU9kISA8tEpKSwzDa/klU0w3N5/hoWEPtL4X2N0+/63NT3udcCicQBD86rOUNitE69U9cQbkDdX/dYv0mwFaQxsetSoNaQv258fr4nJJQQuBx/T1K/2TALpwxpua8oie3pG8Pv539ZAyQiPU8P2VaLF7Goe4o26g6wsfR8DqC01mywGoBcL19RSObwGCc1lom5ZT2MstOdJTduqFO9dZ1s2GwtipQw9ZOKnsS4gbMR0tU+/qGli7lBMctJ6z4BQVlfEKe8QnCkRJpgKgMZnZtQ==";
         System.out.println(rsa.decryptFromBase64(text, key));
     }
 }

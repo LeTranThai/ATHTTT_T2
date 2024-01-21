@@ -1,8 +1,5 @@
 package org.example.demo.model;
 
-import java.io.Serializable;
-import java.sql.Timestamp;
-
 public class Color extends ModelParent {
     private String code;
     private String name;
@@ -21,5 +18,13 @@ public class Color extends ModelParent {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Color{" +
+                "code='" + code + '\'' +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
