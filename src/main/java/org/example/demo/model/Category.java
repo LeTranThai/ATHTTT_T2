@@ -21,4 +21,12 @@ public class Category extends ModelParent implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "Category{" +
+                "code='" + code + '\'' +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

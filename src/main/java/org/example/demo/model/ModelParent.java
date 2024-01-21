@@ -1,6 +1,5 @@
 package org.example.demo.model;
 
-import java.io.Serializable;
 import java.sql.Timestamp;
 
 public abstract class ModelParent {

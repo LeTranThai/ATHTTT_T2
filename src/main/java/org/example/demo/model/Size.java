@@ -21,4 +21,12 @@ public class Size extends ModelParent implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "Size{" +
+                "code='" + code + '\'' +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
