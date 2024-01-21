@@ -3,6 +3,18 @@
 <html>
 <head>
     <title>${requestScope.pageName}</title>
+    <style>
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row; /* Make sure the buttons are displayed next to each other */
+
+        }
+        .button-container a{
+            margin:0 200px;
+        }
+    </style>
 </head>
 <body>
 <!-- pages-title-start -->
@@ -10,6 +22,7 @@
 <!-- pages-title-end -->
 <!-- about content section start -->
 <section class="main_shop_area">
+
     <div class="breadcrumbs">
         <div class="container">
             <div class="row">
@@ -20,6 +33,14 @@
                             <strong><a href="${href}">${hrefName}</a></strong>
                         </h2>
                     </div>
+
+
+<%--                    add two return shopping and download order pdf with two button with space between flexbox horizontal--%>
+                    <div class="button-container">
+                        <input type="hidden" name="action" id="action" value=""/>
+                        <a href="shop?type=all&brand=all&color=all&numOfProducts=9&page=1&sort=default" class="btn btn-primary shop-return">Tiếp tục mua hàng</a>
+                        <a href="/sign?id=${orderId}"  class="btn btn-primary download-order">Tải hoá đơn</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -27,4 +48,7 @@
 </section>
 <!-- about content section end -->
 </body>
+<script>
+
+</script>
 </html>

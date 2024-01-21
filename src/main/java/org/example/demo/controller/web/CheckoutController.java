@@ -51,6 +51,7 @@ public class CheckoutController extends HttpServlet {
         String phone = request.getParameter("sdt");
         String address = request.getParameter("address");
         String privateKey = request.getParameter("private");
+
         String infor = "";
         String listProduct = "";
         Cart cart = CartService.getCart(account);
@@ -77,12 +78,19 @@ public class CheckoutController extends HttpServlet {
                 order.setStatus(StatusService.getStatusByName("VERIFY"));
                 OrderServices.updateStatus(order);
             }
-            OrderServices.add(account, cart, recipient, phone, address, hashMess);
+            long orderId= OrderServices.add(account, cart, recipient, phone, address, hashMess);
+            order = OrderServices.getOrder(orderId);
+            CreatePDFOrder createPDFOrder = new CreatePDFOrder("order-" + orderId, order);
+            createPDFOrder.setRootFolder(request.getServletContext().getRealPath(request.getServletContext().getContextPath()));
+            createPDFOrder.createPdf();
+
             CartService.clear(cart);
             request.setAttribute("message", "Đặt hàng thành công");
             request.setAttribute("pageName", "Thông báo");
+            request.setAttribute("orderId", orderId);
             RequestDispatcher rd = request.getRequestDispatcher("/views/web/notification.jsp");
             rd.forward(request, response);
         }
+
     }
 }

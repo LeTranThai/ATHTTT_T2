@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Maven: org.apache.tiles:tiles-autotag-core-runtime:1.2">
+  <library name="Maven: org.apache.tiles:tiles-autotag-core-runtime:1.2" type="java-imported" external-system-id="Maven">
+    <properties groupId="org.apache.tiles" artifactId="tiles-autotag-core-runtime" version="1.2" />
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/org/apache/tiles/tiles-autotag-core-runtime/1.2/tiles-autotag-core-runtime-1.2.jar!/" />
     </CLASSES>

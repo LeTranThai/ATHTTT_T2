@@ -3,11 +3,9 @@ package org.example.demo.dao;
 import org.example.demo.mapper.OrderMapper;
 import org.example.demo.model.Account;
 import org.example.demo.model.Order;
+import org.example.demo.model.Status;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
