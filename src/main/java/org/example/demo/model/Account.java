@@ -1,6 +1,12 @@
 package org.example.demo.model;
 
+import org.example.demo.Services.AccountServices;
+import org.example.demo.Services.OrderServices;
+import org.example.demo.Services.SignService;
+
 import java.io.Serializable;
+import java.sql.Timestamp;
+import java.text.ParseException;
 
 public class Account extends ModelParent implements Serializable {
 
@@ -119,5 +125,34 @@ public class Account extends ModelParent implements Serializable {
                 ", role=" + role +
                 ", status=" + status +
                 '}';
+    }
+    public static Sign getKeyByOrder(Order order) throws ParseException {
+        Sign sign = null;
+        Timestamp day_order = new Timestamp(order.getCreatedDate().getTime());
+        for (Sign s : SignService.getSigns(order.getAccount())) {
+            Timestamp day_create = new Timestamp(s.getCreatedDate().getTime());
+            if (s.getModifiedDate() == null) {
+                return null;
+            }
+            Timestamp day_expired = new Timestamp(s.getModifiedDate().getTime());
+            if (day_order.after(day_create) && day_order.before(day_expired)) {
+                sign = s;
+                break;
+            }
+        }
+
+        return sign;
+    }
+    public static void main(String[] args) throws Exception {
+        Order order = OrderServices.getOrder(29);
+        Account account = AccountServices.getUser(order.getAccount().getId());
+        RSA rsa = new RSA();
+        Sign signFind = getKeyByOrder(order);
+        Sign sign = SignService.getSignWithAccountAndIsActive(account, true);
+
+        System.out.println(sign);
+        System.out.println(signFind);
+//        String decrypt = rsa.decryptFromBase64(mess, keyString);
+//        System.out.println(decrypt);
     }
 }

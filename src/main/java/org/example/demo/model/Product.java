@@ -1,7 +1,6 @@
 package org.example.demo.model;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
 import java.util.List;
 
 public class Product extends ModelParent implements Serializable {
@@ -104,5 +103,22 @@ public class Product extends ModelParent implements Serializable {
 
     public void setImages(List<Image> images) {
         this.images = images;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "code='" + code + '\'' +
+                ", name='" + name + '\'' +
+                ", brand=" + brand +
+                ", category=" + category +
+                ", price=" + price +
+                ", discount=" + discount +
+                ", description='" + description + '\'' +
+                ", thumbnail='" + thumbnail + '\'' +
+                ", totalReviews=" + totalReviews +
+                ", totalStars=" + totalStars +
+                ", images=" + images +
+                '}';
     }
 }

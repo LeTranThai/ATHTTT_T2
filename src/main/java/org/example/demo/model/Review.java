@@ -39,4 +39,5 @@ public class Review extends ModelParent implements Serializable {
     public void setStar(int star) {
         this.star = star;
     }
+
 }

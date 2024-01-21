@@ -1,24 +1,38 @@
 package org.example.demo.model;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
 import java.util.List;
 
 public class Order extends ModelParent implements Serializable {
     private Account account;
     private String recipient;
     private String orderPhone;
+    private String hash;
+    private Integer billId;
     private String orderAddress;
-    private String hashMess;
+    private String HASHMESS;
     private Status status;
     private List<OrderItem> items;
-
-    public String getHashMess() {
-        return hashMess;
+    public String getHash() {
+        return hash;
+    }
+    public void setHash(String hash) {
+        this.hash = hash;
+    }
+    public void setBillId(Integer billId) {
+        this.billId = billId;
     }
 
-    public void setHashMess(String hashMess) {
-        this.hashMess = hashMess;
+    public Integer getBillId() {
+        return billId;
+    }
+
+    public String getHashMess() {
+        return HASHMESS;
+    }
+
+    public void setHashMess(String HASHMESS) {
+        this.HASHMESS = HASHMESS;
     }
 
     public Account getAccount() {
@@ -72,11 +86,12 @@ public class Order extends ModelParent implements Serializable {
     @Override
     public String toString() {
         return "Order{" +
-                "account=" + account +
+                "account=" + account.getId() +
                 ", recipient='" + recipient + '\'' +
                 ", orderPhone='" + orderPhone + '\'' +
+                ", billId=" + billId +
                 ", orderAddress='" + orderAddress + '\'' +
-                ", hashMess='" + hashMess + '\'' +
+                ", HASHMESS='" + HASHMESS + '\'' +
                 ", status=" + status +
                 ", items=" + items +
                 '}';
