@@ -1,4 +1,4 @@
-package org.example.demo.cer;
+package org.example.demo.ca.cer;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
