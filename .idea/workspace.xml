@@ -9,17 +9,6 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9422597c-d297-4dd1-88df-af2aff7aeac6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnToanBaoMat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AnToanBaoMat.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/admin/OrderManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/admin/OrderManageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/web/SignController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/controller/web/SignController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/dao/AccountDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/dao/AccountDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/dao/OrderItemDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/dao/OrderItemDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/util/CreatePDFOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/util/CreatePDFOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/admin/order-manage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/admin/order-manage.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +18,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -40,7 +29,20 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hungdang2905&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="9e21115c-701d-43a6-be91-429e62376971" />
+        <option name="url" value="https://github.com/LeTranThai/ATHTTT_T2.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -49,68 +51,18 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectColorInfo">{
-    &quot;associatedIndex&quot;: 7
-    }</component>
-  <component name="ProjectId" id="2ZWdQ4nc2rmMrvsezFcY7aOUyTf" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.AccountDao.executor": "Run",
-    "Application.OrderDao.executor": "Run",
-    "Application.OrderItemDao.executor": "Run",
-    "Application.OrderServices.executor": "Run",
-    "Application.SignController.executor": "Run",
-    "Maven.AnToanBaoMat [clean].executor": "Run",
-    "Maven.AnToanBaoMat [install].executor": "Run",
-    "Maven.AnToanBaoMat [package].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Tomcat Server.Tomcat 9.0.80.executor": "Run",
-    "Tomcat Server.Tomcat 9.0.84.executor": "Run",
-    "WebServerToolWindowFactoryState": "false",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/AT/ATHTTT_T2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.20114942",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\atbm\ATHTTT_T2\src\main\java\org\example\demo\Services" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Downloads\AnToanBaoMat\AnToanBaoMat\src\main\java\org\example\demo\model" />
+      <recent name="D:\ATHTTT_T2\src\main\webapp\views\web" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.84">
-    <configuration name="AccountDao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.demo.dao.AccountDao" />
       <module name="AnToanBaoMat" />
       <extension name="coverage">
         <pattern>
@@ -122,46 +74,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderDao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.demo.dao.OrderDao" />
-      <module name="AnToanBaoMat" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.demo.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderItemDao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.demo.dao.OrderItemDao" />
-      <module name="AnToanBaoMat" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.demo.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SignController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.demo.controller.web.SignController" />
-      <module name="AnToanBaoMat" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.demo.controller.web.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tomcat 9.0.84" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.84" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="AnToanBaoMat:war">
@@ -171,7 +83,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="a4cc1db6-ea86-49fc-a3cc-c4639dedeb59" />
+        <option name="BASE_DIRECTORY_NAME" value="6de07c21-cca7-45e3-a9d6-dec83ba4d831" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -179,7 +91,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="51486" />
+        <option name="DEBUG_PORT" value="65222" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -249,56 +161,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.OrderItemDao" />
-      <item itemvalue="Application.AccountDao" />
-      <item itemvalue="Application.SignController" />
-      <item itemvalue="Application.OrderDao" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.84" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.OrderItemDao" />
-        <item itemvalue="Application.AccountDao" />
-        <item itemvalue="Application.SignController" />
-        <item itemvalue="Application.OrderDao" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-19.0.2-corretto-19.0.2-3183f394aec4-f0552fc0" />
-        <option value="jdk-21.0.1-openjdk-21.0.1-3183f394aec4-7d648f2c" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9422597c-d297-4dd1-88df-af2aff7aeac6" name="Changes" comment="" />
-      <created>1702541749671</created>
+      <changelist id="33eae959-5b2a-4b8f-9fb9-e24cdc89d242" name="Changes" comment="" />
+      <created>1705321791729</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1702541749671</updated>
-      <workItem from="1702541751088" duration="5063000" />
-      <workItem from="1702554495855" duration="2597000" />
-      <workItem from="1702702305054" duration="17593000" />
-      <workItem from="1702732768746" duration="705000" />
-      <workItem from="1704871935160" duration="1944000" />
-      <workItem from="1705120601940" duration="14041000" />
-      <workItem from="1705296823591" duration="6513000" />
-      <workItem from="1705308126360" duration="402000" />
-      <workItem from="1705321976601" duration="7517000" />
     </task>
-    <option name="localTasksCounter" value="2" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update signup and order" />
-    <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>

@@ -39,4 +39,14 @@ public class Status extends ModelParent implements Serializable {
     public void setStatusGroup(String statusGroup) {
         this.statusGroup = statusGroup;
     }
+
+    @Override
+    public String toString() {
+        return "Status{" +
+                "code='" + code + '\'' +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", statusGroup='" + statusGroup + '\'' +
+                '}';
+    }
 }

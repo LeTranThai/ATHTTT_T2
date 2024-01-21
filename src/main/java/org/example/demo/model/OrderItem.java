@@ -66,4 +66,17 @@ public class OrderItem implements Serializable {
     public void setDiscount(int discount) {
         this.discount = discount;
     }
+
+    @Override
+    public String toString() {
+        return "OrderItem{" +
+                "orderId=" + orderId +
+                ", product=" + product +
+                ", size=" + size +
+                ", color=" + color +
+                ", amount=" + amount +
+                ", price=" + price +
+                ", discount=" + discount +
+                '}';
+    }
 }
