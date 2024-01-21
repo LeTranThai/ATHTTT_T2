@@ -112,8 +112,13 @@ public class CreatePDFOrder {
 
             // đóng file
             document.close();
-            FileUtil.copyFile(fileUrl, "E:\\GocHocTap\\intellij\\Antoanbaomathttt\\WebBanQuanAo\\src\\main\\webapp\\orders\\download\\" + filename + ".pdf", false);
-//            FileUtil.copyFile(orderUrl, "E:\\GocHocTap\\intellij\\Antoanbaomathttt\\WebBanQuanAo\\src\\main\\webapp\\orders\\download\\order-" + order.getId() + ".pdf", false);
+            String projectDirectory = System.getProperty("user.dir");
+
+            String targetDirectory = projectDirectory + "\\src\\main\\webapp\\orders\\download\\";
+
+            String destinationPath = targetDirectory + filename + ".pdf";
+            FileUtil.copyFile(fileUrl, destinationPath, false);
+
 
         } catch (DocumentException e) {
             e.printStackTrace();

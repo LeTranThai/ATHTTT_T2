@@ -5,7 +5,6 @@ target/
 !**/src/test/**/target/
 # Maven
 target/
-
 # Eclipse
 .classpath
 .project
@@ -13,7 +12,8 @@ target/
 
 # IntelliJ IDEA
 .idea/
-
+.idea\
+*.iml
 # NetBeans
 nbproject/
 
@@ -35,3 +35,9 @@ nbproject/
 
 # IDE-specific files
 *.iml
+AnToanBaoMat.iml
+.idea/workspace.xml
+.idea/compiler.xml
+AnToanBaoMat.iml
+.idea/workspace.xml
+.idea/compiler.xml

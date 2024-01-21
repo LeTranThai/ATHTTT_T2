@@ -9,8 +9,6 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33eae959-5b2a-4b8f-9fb9-e24cdc89d242" name="Changes" comment="cap nhat file tool.jar">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,28 +52,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 3
-}</component>
-  <component name="ProjectId" id="2b7VUpjXUCgUBeuHpE0YhjS0ZZw" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;hung1&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/ATHTTT_T2/src/main/webapp/views/web&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -83,9 +63,6 @@
       <recent name="D:\ATHTTT_T2\src\main\webapp\views\web" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.801">
-    <configuration name="Connect" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.demo.dao.Connect" />
       <module name="AnToanBaoMat" />
       <extension name="coverage">
         <pattern>
@@ -97,7 +74,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.801" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.801" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="AnToanBaoMat:war">
@@ -185,15 +161,6 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Connect" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.801" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Connect" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -201,27 +168,6 @@
       <created>1705321791729</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1705321791729</updated>
-      <workItem from="1705321794064" duration="2020000" />
-      <workItem from="1705566127264" duration="3000" />
-      <workItem from="1705566291465" duration="353000" />
-      <workItem from="1705566839057" duration="1305000" />
-    </task>
-    <task id="LOCAL-00001" summary="cap nhat file tool.jar">
-      <option name="closed" value="true" />
-      <created>1705321870543</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1705321870543</updated>
-    </task>
-    <task id="LOCAL-00002" summary="cap nhat file tool.jar">
-      <option name="closed" value="true" />
-      <created>1705321902336</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1705321902336</updated>
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
@@ -230,7 +176,5 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cap nhat file tool.jar" />
-    <option name="LAST_COMMIT_MESSAGE" value="cap nhat file tool.jar" />
   </component>
 </project>

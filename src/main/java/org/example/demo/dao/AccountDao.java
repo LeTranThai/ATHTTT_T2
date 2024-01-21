@@ -231,10 +231,6 @@ public class AccountDao {
         return false;
     }
 
-    public static void main(String[] args) {
-        //test account
-        System.out.println(AccountDao.findOneById(1));
-        //System.out.println(AccountDao.findOneByUserNameAndPassword("admin", "admin", false));
-    }
+
 }
 
